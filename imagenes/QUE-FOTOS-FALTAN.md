@@ -34,3 +34,9 @@ portada, al lado del teléfono.
 ## Nota técnica
 
 Todas a JPEG (esta máquina no tiene encoder WebP). 1400 px de ancho.
+
+## El logo
+
+Esta clínica SI tiene su logo a la vista: va pintado en la pared del
+box, en la foto clinica-02 de la galería. Un PNG suelto igual serviría
+para la cabecera — pedirlo en la llamada.

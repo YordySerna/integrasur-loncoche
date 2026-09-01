@@ -48,10 +48,10 @@
 
 <!-- ========= PORTADA ========= -->
 <section class="portada portada--foto" id="portada" aria-labelledby="t-portada">
-  <!-- LA FOTO DE PORTADA: foto real del negocio. Entra por la derecha y
-       se DISUELVE hacia el titular, que conserva el fondo limpio. -->
+  <!-- FONDO DE PORTADA: 2560 px, nitido. Se disuelve hacia el titular
+       con un gradiente lateral, no con desenfoque. -->
   <div class="portada__foto" aria-hidden="true">
-    <img src="imagenes/clinica-01.jpg" width="1400" height="779"
+    <img src="imagenes/port-01.jpg" width="2560" height="1707"
          decoding="async" fetchpriority="high" alt="">
   </div>
 
@@ -70,6 +70,16 @@
 
 <!-- ========= LA PIEZA FIRMA ========= -->
 <section class="limpieza" id="limpieza" aria-labelledby="t-limp">
+  <!-- AURA DE COLOR: la foto de rubro reventada a desenfoque. No se lee
+       como imagen: aporta color y luz detras de una seccion que si no
+       seria fondo plano. Aca el desenfoque SI es el efecto, no un parche,
+       y por eso el archivo va chico: a 64 px de blur, mas resolucion no
+       cambia nada. Sin loading=lazy porque el elemento va en absoluto con
+       z-index negativo y el navegador nunca lo considera visible. -->
+  <div class="aura" aria-hidden="true">
+    <img src="imagenes/aura-01.jpg" width="900" height="600" decoding="async" alt="">
+  </div>
+
   <div class="limpieza__cabecera">
     <p class="antetitulo">Destartraje, dicho en simple</p>
     <h2 id="t-limp">La limpieza que evita todo</h2>
@@ -123,6 +133,19 @@
 </section>
 
 <!-- ========= LAS PREGUNTAS DEL SILLÓN — ESTRUCTURA K ========= -->
+<!-- ========= MEDIA PANTALLA ========= -->
+<section class="mitades" aria-labelledby="t-mitades">
+  <div class="mitades__foto">
+    <img src="imagenes/media-01.jpg" width="2200" height="1467"
+         loading="lazy" decoding="async" alt="">
+  </div>
+  <div class="mitades__texto">
+    <p class="mitades__ante">La escalera del costo</p>
+    <h2 id="t-mitades">Cada mes que se posterga, sube un peldaño</h2>
+    <p>Una limpieza al año cuesta menos que cualquier tapadura. Una tapadura a tiempo cuesta una fracción de lo que cuesta el tratamiento de conducto que viene después. Y ese tratamiento cuesta menos que reponer la pieza cuando ya no hay nada que salvar. La escalera es siempre la misma y siempre sube en la misma dirección.</p>
+  </div>
+</section>
+
 <section class="sillon" id="sillon" aria-labelledby="t-sillon">
   <div class="sillon__cabecera">
     <p class="antetitulo antetitulo--claro">Lo que se pregunta en voz baja</p>
@@ -205,6 +228,18 @@
 </section>
 
 <!-- ========= EL CIERRE — T1 ========= -->
+<!-- ========= LA CITA A SANGRE ========= -->
+<section class="cita" aria-labelledby="t-cita">
+  <div class="cita__foto" aria-hidden="true">
+    <img src="imagenes/cita-01.jpg" width="2200" height="1467"
+         loading="lazy" decoding="async" alt="">
+  </div>
+  <blockquote class="cita__texto">
+    <p id="t-cita">Lo barato es prevenir<br>
+      <span class="cita__eco">Nadie pide hora hasta que duele, y ahí ya subió el peldaño</span></p>
+  </blockquote>
+</section>
+
 <section class="cierre" id="llamar" aria-labelledby="t-cierre">
   <p class="cierre__rot">Para pedir hora de limpieza</p>
   <h2 id="t-cierre" class="cierre__tel">
@@ -213,12 +248,30 @@
   <p class="cierre__pie">Es el número publicado en su ficha de Google.</p>
 </section>
 
+<!-- ========= LA TIRA ========= -->
+<section class="tira" aria-label="Tres imágenes del oficio">
+  <figure class="tira__pieza">
+    <img src="imagenes/tira-01.jpg" width="1100" height="733" loading="lazy" decoding="async" alt="Atención odontológica en el sillón de un box dental.">
+  </figure>
+  <figure class="tira__pieza">
+    <img src="imagenes/tira-02.jpg" width="1100" height="733" loading="lazy" decoding="async" alt="Instrumental dental ordenado en la bandeja.">
+  </figure>
+  <figure class="tira__pieza">
+    <img src="imagenes/tira-03.jpg" width="1100" height="733" loading="lazy" decoding="async" alt="Box dental con el sillón y el equipamiento a la vista.">
+  </figure>
+</section>
+
 <!-- ========= LAS FOTOS ========= -->
 <section class="galeria" aria-labelledby="t-galeria">
   <h2 id="t-galeria" class="galeria__titulo">El edificio y el box</h2>
   <p class="galeria__nota">Fotos publicadas por la propia clínica en su Facebook. En la del box se lee el logo en la pared: es su sillón, no una foto de catálogo.</p>
   <div class="galeria__grilla">
-    <figure class="gal gal--abajo">
+    <figure class="gal gal--izq">
+      <img src="imagenes/clinica-01.jpg" width="1400" height="779" loading="lazy" decoding="async"
+           alt="El edificio de la clínica visto desde la calle, revestido en madera y piedra.">
+      <figcaption>El edificio desde la calle. Foto suya, de su Facebook.</figcaption>
+    </figure>
+    <figure class="gal gal--der">
       <img src="imagenes/clinica-02.jpg" width="788" height="1400" loading="lazy" decoding="async"
            alt="Box de atención con el sillón dental y el logo de la clínica pintado en la pared.">
       <figcaption>El box, con el logo en la pared.</figcaption>

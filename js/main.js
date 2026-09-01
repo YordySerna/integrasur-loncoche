@@ -32,7 +32,7 @@
 
   /* ── 2 · Apariciones al entrar en pantalla ── */
   var piezas = [];
-  ['.portada', '.portada__texto', '.galeria__titulo', '.gal', '.limpieza__cabecera', '.fi', '.sillon__cabecera', '.filas', '.cierre', '.dueno__cols']
+  ['.portada', '.mitades__texto', '.mitades__foto', '.cita__texto', '.tira__pieza', '.portada__texto', '.galeria__titulo', '.gal', '.limpieza__cabecera', '.fi', '.sillon__cabecera', '.filas', '.cierre', '.dueno__cols']
     .forEach(function (sel) {
       Array.prototype.forEach.call(document.querySelectorAll(sel), function (el) {
         piezas.push(el);
